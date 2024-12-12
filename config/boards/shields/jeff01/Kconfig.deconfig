@@ -1,0 +1,16 @@
+if SHIELD_JEFF01_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "Jeff01"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_JEFF01_LEFT || SHIELD_JEFF01_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+endif
