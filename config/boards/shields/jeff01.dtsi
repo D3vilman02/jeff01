@@ -5,13 +5,12 @@
     chosen {
         zmk,kscan = keyscan0;
         zmk,matrix_transform = &default_transform;
-        // Other chosen items
     };
     
 
     default_transform: keymap_transform0 {
         compatible = "zmk,matrix-transform";
-        columns = <5>;
+        columns = <10>;
         rows = <4>;
         map = <
         //  LKey 1 |LKey 2 |LKey 3 |LKey 4 |LKey 5      RKey 1 |RKey 2 |RKey 3 |RKey 4 |RKey 5
@@ -27,6 +26,7 @@
 
     keyscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
+        wakeup-source;
         diode-direction = "col2row";
 
         row-gpios
